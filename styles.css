@@ -1,52 +1,113 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 10px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 20px;
-}
-
-nav a:hover {
-    background-color: #ddd;
 }
 
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
-    padding: 20px;
 }
 
-footer {
-    background-color: #333;
+header {
+    background: #333;
     color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding-top: 30px;
+    min-height: 100px; /* Aumentado para acomodar o logo */
+    display: flex;
+    justify-content: space-between; /* Espaço entre o logo e o menu */
+    align-items: center; /* Alinhar verticalmente ao centro */
 }
 
-.image {
-    max-width: 100%;
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    width: 60px; /* Ajuste conforme necessário */
     height: auto;
-    margin-bottom: 20px;
+    margin-right: 10px;
+}
+
+header .logo h1 {
+    font-size: 1.6em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0 10px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #f3c945;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block;
+        float: right;
+        padding: 28px 20px;
+        cursor: pointer;
+    }
+
+    .menu-icon .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background: #fff;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background-color: #333;
+        position: absolute;
+        top: 100px; /* Ajuste conforme necessário */
+        right: 0;
+        left: 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin-top: 10px;
+    }
 }
