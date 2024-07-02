@@ -169,3 +169,11 @@ footer {
         font-size: 18px;
     }
 }
+
+/* Estilos adicionais para imagens */
+
+.imagem-sobre, .imagem-contato {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
