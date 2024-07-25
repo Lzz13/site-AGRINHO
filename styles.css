@@ -1,179 +1,108 @@
-/* Reset básico */
-* {
+:root {
+    --cor-header: #000000;
+    --cor-letra-header: white;
+    --hover: #661fda;
+    --cor-menu: white;
+}
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* Estilos para o header e o menu hamburger */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-.container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 20px;
+    background-color: var(--cor-header);
+    color: var(--cor-letra-header);
+    position: relative;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
+    flex: 1;
 }
 
-nav ul {
-    list-style: none;
+.logo img {
+    height: 50%;
+    width: 50%;
+}
+
+.titulo {
+    flex: 2;
+    text-align: center;
+}
+
+.menu {
+    flex: 3;
     display: flex;
+    justify-content: space-around;
 }
 
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: #fff;
+.menu a {
+    color: var(--cor-letra-header);
     text-decoration: none;
-    padding: 10px;
-    display: block;
+    padding: 8px 16px;
 }
 
-/* Estilos para o menu hamburger */
-#menuToggle {
-    display: block;
-    position: relative;
-    user-select: none;
+.menu a:hover {
+    background-color: var(--hover);
+    border-radius: 4px;
 }
 
-#menuToggle input {
-    display: block;
-    width: 40px;
-    height: 32px;
-    position: absolute;
-    top: -7px;
-    left: -5px;
-    cursor: pointer;
-    opacity: 0; /* oculta o checkbox */
-    z-index: 2; /* acima dos spans */
-    -webkit-touch-callout: none;
-}
-
-#menuToggle span {
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
-    background: #fff;
-    border-radius: 3px;
-    z-index: 1;
-    transform-origin: 4px 0px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
-}
-
-#menuToggle span:first-child {
-    transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2) {
-    transform-origin: 0% 100%;
-}
-
-/* checkbox ativo: anima os spans para o cruzar */
-#menuToggle input:checked ~ span {
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #333;
-}
-
-/* checkbox ativo: esconde o menu */
-#menuToggle input:checked ~ ul {
-    display: block;
-}
-
-/* esconde o menu */
-#menu {
+.hamburger {
     display: none;
-    position: absolute;
-    width: 200px;
-    background: #333;
-    list-style-type: none;
-    padding: 10px;
-    margin: 10px 0 0 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--cor-menu);
 }
 
-#menu li {
-    margin-bottom: 10px;
-}
-
-#menu li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* Conteúdo principal */
-.content {
-    padding: 50px 0;
-    background-color: #f0f0f0;
-    text-align: center;
-}
-
-/* Rodapé */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Responsividade */
 @media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav {
-        margin-top: 15px;
-    }
-
-    #menuToggle {
-        padding: 10px;
-        background-color: #333;
-        cursor: pointer;
-    }
-
-    #menu {
-        position: static;
+    .menu {
         display: none;
+        flex-direction: column;
         width: 100%;
-        padding: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--cor-header);
     }
 
-    #menu li {
+    .logo img {
+        height: auto;
+    }
+
+    .menu a {
         text-align: center;
-        margin-bottom: 15px;
+        padding: 10px;
+        border-top: 1px solid var(--hover);
     }
 
-    #menu li a {
-        font-size: 18px;
+    .hamburger {
+        display: block;
+    }
+
+    #menuToggle:checked ~ .menu {
+        display: flex;
     }
 }
 
-/* Estilos adicionais para imagens */
+#menuToggle {
+    display: none;
+}
 
-.imagem-sobre, .imagem-contato {
-    max-width: 100%;
-    height: auto;
-    margin-top: 10px;
+section {
+    padding: 60px 20px;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.intro{
+    text-align: center;
 }

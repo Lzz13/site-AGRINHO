@@ -1,67 +1,73 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Hamburger</title>
+    <title>Black Sabbath</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
-        <div class="container">
-            <div class="logo">Logo</div>
-            <nav>
-                <div id="menuToggle">
-                    <input type="checkbox">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul id="menu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Contato</a></li>
-                    </ul>
-                </div>
-            </nav>
+        <div class="logo">
+            <img src="" alt="Logo">
         </div>
+        <div class="titulo">
+            <h1>Black Sabbath</h1>
+        </div>
+        <input type="checkbox" id="menuToggle">
+        <label for="menuToggle" class="hamburger">&#9776;</label>
+        <nav class="menu">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#login">Login</a>
+        </nav>
     </header>
 
-    <section class="content">
-        <div class="container">
-            <h1>Técnologia no meio agricola!</h1>
-        </div>
+    <section id="home">
+        <h2 class="intro">Bem-vindo ao site Black Sabbath</h2>
+        <p class="intro">Exploramos o impacto e as inovações que a tecnologia traz para a agricultura moderna.</p>
     </section>
-    <main>
-        <div class="container">
-            <section id="sobre">
-                <h2>Sobre Nós</h2>
-                <p>Texto informativo sobre a empresa ou site.</p>
-                <img src="imagem-sobre.jpg" alt="Imagem Sobre Nós" class="imagem-sobre">
-            </section>
-            
-            <section id="servicos">
-                <h2>Nossos Serviços</h2>
-                <ul>
-                    <li>Serviço 1</li>
-                    <li>Serviço 2</li>
-                    <li>Serviço 3</li>
-                </ul>
-            </section>
 
-            <section id="contato">
-                <h2>Contato</h2>
-                <p>Informações de contato e formulário de contato.</p>
-                <img src="imagem-contato.jpg" alt="Imagem Contato" class="imagem-contato">
-            </section>
-        </div>
-    </main>
+    <section id="tecnologia-agricola">
+        <h2>Tecnologia no Meio Agrícola</h2>
+        <p>A tecnologia tem transformado a agricultura de várias maneiras, proporcionando maior eficiência, sustentabilidade e produtividade. Vamos explorar algumas das inovações mais impactantes no setor agrícola.</p>
+        
+        <h3>1. Agricultura de Precisão</h3>
+        <p>A agricultura de precisão utiliza tecnologias como GPS e sensores para monitorar e otimizar o uso de recursos em plantações. Isso inclui a aplicação precisa de fertilizantes, pesticidas e água, resultando em maior rendimento e menor impacto ambiental.</p>
+        <img src="agricultura-precisao.jpg" alt="Agricultura de Precisão" width="600">
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Exemplo de Menu Hamburger</p>
-        </div>
-    </footer>
+        <h3>2. Drones e Imagens Aéreas</h3>
+        <p>Os drones são cada vez mais usados para monitorar campos agrícolas. Eles podem capturar imagens aéreas detalhadas que ajudam os agricultores a identificar áreas problemáticas, monitorar a saúde das plantas e avaliar os danos causados por pragas ou condições climáticas adversas.</p>
+        <img src="drones-agricultura.jpg" alt="Drones na Agricultura" width="600">
+
+        <h3>3. Internet das Coisas (IoT)</h3>
+        <p>A IoT na agricultura conecta dispositivos e sensores em uma rede que coleta e analisa dados em tempo real. Isso permite o monitoramento contínuo de condições ambientais, saúde do solo e crescimento das plantas, facilitando a tomada de decisões informadas e o gerenciamento eficiente das operações agrícolas.</p>
+        <img src="iot-agricultura.jpg" alt="IoT na Agricultura" width="600">
+
+        <h3>4. Máquinas Agrícolas Automatizadas</h3>
+        <p>Tratores e colheitadeiras autônomos estão revolucionando o trabalho agrícola, permitindo operações mais eficientes e reduzindo a necessidade de mão de obra manual intensiva. Essas máquinas podem operar com alta precisão, seguindo rotas pré-determinadas e realizando tarefas específicas de forma autônoma.</p>
+        <img src="maquinas-automatizadas.jpg" alt="Máquinas Agrícolas Automatizadas" width="600">
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Aqui você encontrará informações sobre os serviços que oferecemos.</p>
+    </section>
+
+    <section id="about">
+        <h2>About</h2>
+        <p>Saiba mais sobre nós e nossa missão.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Entre em contato conosco para mais informações.</p>
+    </section>
 
 </body>
+
 </html>
